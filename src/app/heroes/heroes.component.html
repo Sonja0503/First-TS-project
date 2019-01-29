@@ -1,0 +1,55 @@
+<h2>My Jewelry</h2>
+<div>
+  <label>Jewelry name:
+    <input #heroName />
+  </label>
+  <button class="add" (click)="add(heroName.value); heroName.value=''">add</button>
+
+</div>
+
+<ul class="heroes">
+    <!-- <li *ngFor="let hero of heroes">
+
+      <a routerLink="/detail/{{hero.id}}">
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
+      </a>
+      <button class="delete" title="delete hero"
+        (click)="delete(hero)">X</button>
+      <button class="add" title="add jew"
+        (click)
+    </li> -->
+
+    <li *ngFor="let item of storage_list">
+      <a routerLink="/detail/{{item.type}}">
+        <span class="badge">{{item.type}}</span>{{item.jewelryType}}
+      </a>
+    </li>
+</ul>
+
+<div>
+  <input [(ngModel)]="charr.jew_name" placeholder="Name">
+  <input [(ngModel)]="charr.description" placeholder="Description">
+  <input [(ngModel)]="charr.artist_name" placeholder="Artist name">
+  <input [(ngModel)]="charr.price" placeholder="Price">
+  <div>{{charr.jew_name}}</div>
+  <div>{{charr.description}}</div>
+  <div>{{charr.artist_name}}</div>
+  <div>{{charr.price}}</div>
+  <button type="submit" class="add" title="add jewelry"
+    (click)="addJewelry()">add jewelry</button>
+</div>
+<div>
+
+  <input [(ngModel)]="jewelry.jewelry" placeholder="Jewelry">
+  <input [(ngModel)]="jewelry.jew_type" placeholder="Jewelry Type">
+  <input [(ngModel)]="jewelry.quantity" placeholder="Quantity">
+  <div>{{jewelry.jewelry}}</div>
+  <div>{{jewelry.jew_type}}</div>
+  <div>{{jewelry.quantity}}</div>
+  <button type="submit" class="add" title="add quantity"
+    (click)="addSto()">add quantity</button>
+</div>
+
+
+
+

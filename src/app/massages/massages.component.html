@@ -1,0 +1,8 @@
+<div *ngIf="massageService.massages.length">
+
+  <h2>Messages</h2>
+  <button class="clear"
+          (click)="massageService.clear()">clear</button>
+  <div *ngFor='let massage of massageService.massages'> {{massage}} </div>
+
+</div>

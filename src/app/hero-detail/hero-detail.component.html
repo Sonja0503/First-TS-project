@@ -1,0 +1,35 @@
+<!-- <div *ngIf="hero">
+    <h2>{{hero.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{hero.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="hero.name" placeholder="name"/>
+      </label>
+    </div>
+    <button (click)="goBack()">go back</button>
+    <button (click)="save()">save</button>
+  </div> -->
+
+
+
+
+  <div>
+    <ul class="an">
+      <li *ngFor="let o of jewelry_list">
+        <span class="badge" (click)="clickJewelry(o)">{{o.artist_name}}</span><span>{{o.jew_name}}</span>
+        <div><span class="badge2">${{o.price}}</span></div>
+      </li>
+    </ul>
+    <div>
+        <label>Artist name:<input [(ngModel)]="selectedItem.artist_name" placeholder="artist name"/></label>
+        <label>Name:<input [(ngModel)]="selectedItem.jew_name" placeholder="name"/></label>
+        <label>Desc:<input [(ngModel)]="selectedItem.description" placeholder="description"/></label>
+        <label>Price:<input [(ngModel)]="selectedItem.price" placeholder="price"/></label>
+        <button (click)="goBack()">go back</button>
+        <button (click)="saveJ()">save</button>
+        <button (click)="deleteJ()">X</button>
+    </div>
+</div>
+
+
+
